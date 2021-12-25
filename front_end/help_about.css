@@ -1,0 +1,11 @@
+.about-section{
+position: relative;
+text-align: center;
+text-transform: capitalize;
+
+}
+.me{
+
+    background-image: url("./images/2593068.jpg");
+}
+
