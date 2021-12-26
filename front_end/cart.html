@@ -13,13 +13,13 @@
 
 </head>
 
-<body style="background-color:  rgb(17, 15, 15); ">
+<body style="background-color: rgb(17, 15, 15); ">
 
     <!--NavBar-->
-    <nav class="navbar navbar-expand-lg navbar-dark  mb-4 navbar-dark" style="background-color: rgb(137, 2, 62);">
+    <nav class="navbar navbar-expand-lg mb-4 navbar-dark" style="background-color: rgb(137, 2, 62);">
         <div class="container-fluid">
             <div class="container-fluid">
-                <a class="navbar-brand logo" href="#">
+                <a class="navbar-brand logo" href="./index.html">
                     <img src="./images/laptopicon.png" alt="" width="30" height="24"
                         class="d-inline-block align-text-top">
                     ma7al labat
@@ -33,51 +33,32 @@
                     <a class="nav-link" href="./cart.html">cart</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./help_about.html">About</a>
+                    <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./Login.html">Sign In</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./help.html">Help</a>
+                    <a class="nav-link" href="#">Help</a>
                 </li>
             </ul>
         </div>
     </nav>
     <!--navbar-->
 
-    <!--Sign In Box-->
-    <div>
-        <div class="bg-light mb-4"
-            style="margin: auto; border-radius: 15px; padding: 5px; max-width: 40em; display: flex; justify-content: center;">
-            <div class="mb-3">
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-
-
-                    <button onclick="a7()" type="button" class="btn btn-success">Sign in</button>
-                </form>
-                <a class="text-warning" href="./register.html">Create an account</a>
-            </div>
-            <div style="margin: 15px;">
-                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_wsy1p3ad.json"
-                    background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay>
-                </lottie-player>
-            </div>
+    <!--cart-->
+    <div class="container cartcont">
+        <h1 class="title">cart items</h1>
+        <div class="container">
+            <p id="cart"></p>
         </div>
+        <div class="container">
+            <p class="prices" id="tot"></p>
+        </div>
+        <button onclick="a5()" class="btn btn-dark">Veiw cart</button>
+        <button onclick="a7()" class="btn btn-success">Purchase</button>
     </div>
-    <!--sign in box-->
-
-
+    <!--cart-->
 
     <!-- Footer -->
     <footer class="container-fluid text-center text-lg-start bg-light text-muted"
@@ -155,6 +136,36 @@
     <script>
         function a7() {
             alert("not implemented yet :(");
+        }
+        function a5() {
+            let headers = new Headers();
+            headers.append('Content-Type', 'application/json');
+            headers.append('Accept', 'application/json');
+
+            headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
+            headers.append('Access-Control-Allow-Credentials', 'true');
+            var requestOptions = {
+                method: 'GET',
+                redirect: 'follow',
+                //headers: headers
+            };
+
+            fetch("http://localhost:3000/api/cartitems", requestOptions)
+                .then(response => response.json())
+                .then(result => a6(result))
+                .catch(error => console.log('error', error));
+
+            function a6(res) {
+                console.log(res);
+                let tot = 0;
+                let li = "";
+                res.forEach(element => {
+                    li = li.concat("Product: ", element.name, ", Product Price: ", element.price, "  \|  ");
+                    tot += parseInt(element.price);
+                });
+                document.getElementById("cart").innerHTML = li;
+                document.getElementById("tot").innerHTML = "Total price is " + tot;
+            }
         }
     </script>
 </body>

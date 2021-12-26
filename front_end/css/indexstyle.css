@@ -7,3 +7,16 @@
     font-weight: 300;
     text-decoration: rgb(16, 85, 214);
 }
+
+.cartcont{
+    background-color: rgb(181, 188, 194);
+    border-radius: 25px;
+    min-height: 16em;
+    max-width: 10em;
+    justify-content: center;
+}
+.title{
+    text-decoration: wavy;
+    text-decoration: rgb(20, 2, 2);
+    font-family: fantasy;
+}

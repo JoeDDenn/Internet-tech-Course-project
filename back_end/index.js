@@ -1,10 +1,18 @@
+const { json } = require('express');
 const express = require('express');
+const cart = require("./cart");
 const app = express();
 
 
 //routes
-app.get("/", (req, res) => {
-    res.send("5rateez");
+app.get("/api/cartitems", (req, res) => {
+    return res.send(JSON.stringify(cart.cartitems));
+});
+
+app.post("/api/addItem/:id", (req, res) => {
+    cart.addToCart(req.params.id);
+    return res.send(JSON.stringify(cart.cartitems));
+    console.log(list);
 });
 
 //listening
