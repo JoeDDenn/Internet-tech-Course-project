@@ -20,7 +20,7 @@
         <div class="container-fluid">
             <div class="container-fluid">
                 <a class="navbar-brand logo" href="#">
-                    <img src="./images/laptopicon.png" alt="" width="30" height="24"
+                    <img src="./images/laptopicon.png" alt="" width="40" height="34"
                         class="d-inline-block align-text-top">
                     ma7al labat
                 </a>
@@ -33,13 +33,13 @@
                     <a class="nav-link" href="./cart.html">cart</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="./help_about.html">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./Login.html">Sign In</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Help</a>
+                    <a class="nav-link" href="./help.html">Help</a>
                 </li>
             </ul>
         </div>
@@ -66,7 +66,7 @@
                                 <h5 class="card-title">Lenovo thinkpad</h5>
                                 <p class="card-text">Check out this brand new laptop from Lenovo.</p>
                                 <p class="card-text prices">22,000 EGP</p>
-                                <a href="#" class="btn btn-secondary">Add to cart</a>
+                                <button onclick="addToCart(1001)" class="btn btn-secondary">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -74,10 +74,10 @@
                         <div class="card" style="padding: 10px; margin: 5px 5px;">
                             <img src="./images/product2.jpg" class="card-img-top" alt="product">
                             <div class="card-body">
-                                <h5 class="card-title">Lenovo thinkpad</h5>
+                                <h5 class="card-title">Lenovo idea pad</h5>
                                 <p class="card-text">Check out this brand new laptop from Lenovo.</p>
                                 <p class="card-text prices">16,000 EGP</p>
-                                <button onclick="a4(1000)" class="btn btn-secondary">Add to cart</button>
+                                <button onclick="addToCart(1002)" class="btn btn-secondary">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -85,10 +85,10 @@
                         <div class="card" style="padding: 10px; margin: 5px 5px;">
                             <img src="./images/product2.jpg" class="card-img-top" alt="product">
                             <div class="card-body">
-                                <h5 class="card-title">Lenovo thinkpad</h5>
+                                <h5 class="card-title">Dell XPS</h5>
                                 <p class="card-text">Check out this brand new laptop from Lenovo.</p>
                                 <p class="card-text prices">12,600 EGP</p>
-                                <a href="#" class="btn btn-secondary">Add to cart</a>
+                                <button onclick="addToCart(1000)" class="btn btn-secondary">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                 </div>
                 <h5 class="card-title">Merry christmas</h5>
                 <p class="card-text">Check out our latest december offers!!</p>
-                <a href="#" class="btn btn-success">See gifts</a>
+                <button onclick="unimplemented()" class="btn btn-success">See Gifts</button>
             </div>
         </div>
     </div>
@@ -131,7 +131,7 @@
                         <h5 class="card-title">Lenovo thinkpad 3</h5>
                         <p class="card-text">Check out this product!!</p>
                         <p class="card-text prices">17,800 EGP</p>
-                        <a href="#" class="btn btn-secondary">Add to cart</a>
+                        <button onclick="addToCart(1000)" class="btn btn-secondary">Add to cart</button>
                     </div>
                 </div>
                 <div class="card col-3">
@@ -140,7 +140,7 @@
                         <h5 class="card-title">Lenovo laptop</h5>
                         <p class="card-text">Check out this product!!</p>
                         <p class="card-text prices">13,900 EGP</p>
-                        <a href="#" class="btn btn-secondary">Add to cart</a>
+                        <button onclick="addToCart(1000)" class="btn btn-secondary">Add to cart</button>
                     </div>
                 </div>
                 <div class="card col-3">
@@ -149,7 +149,7 @@
                         <h5 class="card-title">Lenovo ideapad</h5>
                         <p class="card-text">Check out this product!!</p>
                         <p class="card-text prices">14,300 EGP</p>
-                        <a href="#" class="btn btn-secondary">Add to cart</a>
+                        <button onclick="addToCart(1000)" class="btn btn-secondary">Add to cart</button>
                     </div>
                 </div>
                 <div class="card col-3">
@@ -158,7 +158,7 @@
                         <h5 class="card-title">Lenovo something</h5>
                         <p class="card-text">Check out this product!!</p>
                         <p class="card-text prices">15,000 EGP</p>
-                        <a href="#" class="btn btn-secondary">Add to cart</a>
+                        <button onclick="addToCart(1000)" class="btn btn-secondary">Add to cart</button>
                     </div>
                 </div>
             </div>
@@ -179,27 +179,27 @@
                         </p>
                     </li>
                     <li class="list-group-item">
-                        <a href="">
+                        <a href="#">
                             Dell
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="">
+                        <a href="#">
                             Lenovo
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="">
+                        <a href="#">
                             HP
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="">
+                        <a href="#">
                             Phones
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="">
+                        <a href="#">
                             Tablets
                         </a>
                     </li>
@@ -216,8 +216,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Nokia 9</h5>
                                 <p class="card-text">1080p, 48 mp camera, amoled display</p>
-                                <p class="card-text prices">3000 EGP</p>
-                                <a href="#" class="btn btn-success">Check it out</a>
+                                <p class="card-text prices">4000 EGP</p>
+                                <button onclick="addToCart(2003)" class="btn btn-success">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -227,8 +227,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Nokia 9</h5>
                                 <p class="card-text">1080p, 48 mp camera, amoled display</p>
-                                <p class="card-text prices">3000 EGP</p>
-                                <a href="#" class="btn btn-success">Check it out</a>
+                                <p class="card-text prices">4000 EGP</p>
+                                <button onclick="addToCart(2003)" class="btn btn-success">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -312,11 +312,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <script>
-        function a4(itemid) {
-
-        }
-    </script>
+    <script src="./js/front.js"></script>
 </body>
 
 </html>

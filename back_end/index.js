@@ -12,7 +12,6 @@ app.get("/api/cartitems", (req, res) => {
 app.post("/api/addItem/:id", (req, res) => {
     cart.addToCart(req.params.id);
     return res.send(JSON.stringify(cart.cartitems));
-    console.log(list);
 });
 
 //listening

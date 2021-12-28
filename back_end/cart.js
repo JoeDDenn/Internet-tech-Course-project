@@ -13,8 +13,7 @@ function addToCart(itemID) {
 }
 
 function removeFromCart(itemID) {
-    let list = it.listItems;
-    cartitems.pop(list.find(x => x.id === itemID));
+    cartitems.pop(it.itemList.find(x => x.id === itemID));
 }
 
 

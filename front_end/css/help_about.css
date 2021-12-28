@@ -1,0 +1,23 @@
+.about-section{
+position: relative;
+text-align: center;
+text-transform: capitalize;
+}
+
+.me{
+
+    background-image: url("../images/2593068.jpg");
+}
+
+.box{
+    padding: 5px;
+    background-color: rgb(181, 188, 194);
+    border-radius: 25px;
+    min-height: 16em;
+    max-width: 7em;
+    justify-content: center;
+}
+.box2{
+    display: flex;
+    justify-content: center;
+}
