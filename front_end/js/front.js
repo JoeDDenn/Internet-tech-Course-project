@@ -7,7 +7,7 @@ function addToCart(id) {
 
     fetch(url, requestOptions)
         .then(response => response.json())
-        .then(result => alert("Item added ", result.name))
+        .then(result => alert("Item added"))
         .catch(error => console.log(error));
 }
 
@@ -16,25 +16,20 @@ function unimplemented() {
 }
 
 function a5() {
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    headers.append('Accept', 'application/json');
+    let url = "http://localhost:3000/api/cartitems"
 
-    headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
-    headers.append('Access-Control-Allow-Credentials', 'true');
     var requestOptions = {
         method: 'GET',
         redirect: 'follow',
-        //headers: headers
+
     };
 
-    fetch("http://localhost:3000/api/cartitems", requestOptions)
+    fetch(url, requestOptions)
         .then(response => response.json())
         .then(result => a6(result))
         .catch(error => console.log('error', error));
 
     function a6(res) {
-        console.log(res);
         let tot = 0;
         let li = "";
         res.forEach(element => {

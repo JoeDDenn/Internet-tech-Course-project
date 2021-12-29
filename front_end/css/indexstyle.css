@@ -15,8 +15,61 @@
     max-width: 10em;
     justify-content: center;
 }
+
 .title{
     text-decoration: wavy;
     text-decoration: rgb(20, 2, 2);
     font-family: fantasy;
+}
+
+.section3{
+    margin: 5px;
+}
+
+.productrow{
+    justify-content: center;
+}
+
+.loginbox{
+    margin: auto;
+    border-radius: 15px;
+    padding: 5px;
+    max-width: 40em;
+    display: flex;
+    -content: center;
+}
+@media (max-width : 991px){
+
+}
+@media (max-width : 768px){
+    .card{
+        margin: .2em;
+    }
+    .featrow{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section3{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .gifts{
+        display: flex;
+        justify-content: center;
+    }
+    .cartcont{
+        min-width: 400px;
+    }
+    .buttons{
+        border-bottom-right-radius: .5rem;
+    }
+    .box{
+        min-height: 150px;
+    }
+
+    .loginbox{
+        padding: 5px;
+        margin: 10px;
+    }
 }

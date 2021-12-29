@@ -11,7 +11,7 @@ text-transform: capitalize;
 
 .box{
     padding: 5px;
-    background-color: rgb(181, 188, 194);
+    background-color: rgb(89, 175, 245);
     border-radius: 25px;
     min-height: 16em;
     max-width: 7em;
@@ -20,4 +20,10 @@ text-transform: capitalize;
 .box2{
     display: flex;
     justify-content: center;
+}
+
+@media (max-width : 768px){
+    .box{
+        min-width: 350px;
+    }
 }
